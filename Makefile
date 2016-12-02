@@ -7,7 +7,16 @@ server:
 build:
 	hugo
 
-sync: build
+sync-to-aws: build
 	aws s3 --profile korebantic sync ./public s3://$(S3_SITE_BUCKET)
 
-.PHONY: server build sync
+# requires: git submodule add -b master git@github.com:talbright/talbright.github.io.git public
+sync-to-github: build
+	cd public && \
+	git add -A && \
+	git commit -m "rebuilding site with hugo" && \
+	git push origin master
+
+sync: sync-to-github sync-to-aws
+
+.PHONY: server build sync-to-aws sync-to-github
