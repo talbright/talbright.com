@@ -1,17 +1,27 @@
-baseurl = "http://talbright.com/"
-title = "talbright"
 languageCode = "en-us"
-theme = "vec"
-paginate = 15
+title = "Aerial"
+baseurl = "http://talbright.com/"
+theme = "aerial"
 
 [params]
-  Keywords = "developer,aws,go lang,ruby,ruby on rails,cloud,lead"
-  Description = "There are some words to describe your site"
+  name = "Trent Albright"
+  about = "Lead Platform Engineer @ Salesforce"
+  copyright = "Trent Albright"
+  #Disable the scrolling background by entering any string for bg_scroll. Enable by leaving bg_scroll empty.
+  bg_scroll = "_no_"
+  favicon = "favicon.ico"
 
-  Avater = "img/avatar.png"
-  SelfIntro = "Web engineer, open source enthusiast, father, and all around nice guy."
-  Email = "trent.albright@gmail.com"
+[[params.social]]
+  medium = "Twitter"
+  icon = "twitter"
+  link = "https://twitter.com/trent_albright"
 
-  GithubID = "talbright"
-  TwitterID = "trent_albright"
-  LinkedInID = "trentalbright"
+[[params.social]]
+  medium = "Github"
+  icon = "github"
+  link = "https://github.com/talbright"
+
+[[params.social]]
+  medium = "LinkedIn"
+  icon = "linkedin"
+  link = "https://www.linkedin.com/in/trentalbright"

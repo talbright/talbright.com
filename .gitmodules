@@ -2,3 +2,6 @@
 	path = public
 	url = git@github.com:talbright/talbright.github.io.git
 	branch = master
+[submodule "themes/aerial"]
+	path = themes/aerial
+	url = https://github.com/sethmacleod/aerial.git
