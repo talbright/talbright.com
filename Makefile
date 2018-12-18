@@ -8,7 +8,7 @@ build:
 	hugo
 
 sync-to-aws: build
-	aws s3 --profile korebantic sync ./public s3://$(S3_SITE_BUCKET)
+	aws s3 sync ./public s3://$(S3_SITE_BUCKET)
 
 # requires: git submodule add -b master git@github.com:talbright/talbright.github.io.git public
 sync-to-github: build
